@@ -12,6 +12,7 @@ import { clientFetcher, clientFileDownload, clientPoster } from "@/utils/api";
 import { PaymentModal, PaymentVerificationDetail } from "./Modal/PaymentModal";
 import { sleep } from "@/utils/time";
 import Typewriter from "./typewriter";
+import { CopyIcon } from "./icons";
 
 interface SWRResponse {
   instances: StoredInstance[];
@@ -90,15 +91,19 @@ export function Instance({ instance }: Props) {
             SSH Command
           </label>
           <div
-            className="p-[2px] rounded-lg transition duration-300 group/input"
+            className="p-[2px] rounded-lg transition duration-300 group/input flex gap-2 items-center"
             style={{
               background:
                 "radial-gradient(0px circle at 48px 34.633331298828125px,var(--purple-600),transparent 80%",
             }}
           >
-            <div className="bg-zinc-800 text-white px-3 py-2 rounded-md text-sm">
-              {instance.sshCommand}
-            </div>
+            <input
+              className="input-field"
+              id="address"
+              value={instance.sshCommand}
+            />
+
+            <CopyIcon value={instance.sshCommand || ""} />
           </div>
         </div>
 
@@ -237,27 +242,30 @@ export function Instances() {
   );
 
   const instances = (
-    <div className="w-full p-4">
+    <div className="w-full p-4 overflow-x-hidden">
       <div className="flex justify-between items-center gap-4 px-4">
         <h2 className="text-2xl">Instances</h2>
         <span className="font-bold text-xs sm:text-sm">Click to view</span>
       </div>
-      <table className="w-full rounded border border-neutral-800 mt-6 p-4">
-        <tr className="flex flex-row items-center p-2 border-b border-neutral-800 gap-4 md:gap-0">
-          <th className="w-full text-left text-sm text-zinc-400">Type</th>
-          <th className="w-full text-left text-sm text-zinc-400">Plan</th>
-          <th className="w-full text-left text-sm text-zinc-400">Location</th>
-          <th className="w-full text-left text-sm text-zinc-400">Status</th>
-          <th className="w-full text-left text-sm text-zinc-400">
-            Terminates At
-          </th>
-          <th className="w-full text-left text-sm text-zinc-400">Keypair</th>
-        </tr>
 
-        {data?.instances.map((instance, key) => (
-          <Instance key={key} instance={instance} />
-        ))}
-      </table>
+      <div className="mt-4 overflow-x-auto">
+        <table className="w-full rounded border border-neutral-800 mt-6 p-4">
+          <tr className="flex flex-row items-center p-2 border-b border-neutral-800 gap-4 md:gap-0">
+            <th className="w-full text-left text-sm text-zinc-400">Type</th>
+            <th className="w-full text-left text-sm text-zinc-400">Plan</th>
+            <th className="w-full text-left text-sm text-zinc-400">Location</th>
+            <th className="w-full text-left text-sm text-zinc-400">Status</th>
+            <th className="w-full text-left text-sm text-zinc-400">
+              Terminates At
+            </th>
+            <th className="w-full text-left text-sm text-zinc-400">Keypair</th>
+          </tr>
+
+          {data?.instances.map((instance, key) => (
+            <Instance key={key} instance={instance} />
+          ))}
+        </table>
+      </div>
     </div>
   );
 

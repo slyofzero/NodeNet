@@ -20,11 +20,11 @@ const SIDEBAR_DATA = [
     icons: <DashboardIcon />,
     urlPath: "/",
   },
-  {
-    name: "Pricing",
-    icons: <PricingIcon />,
-    urlPath: "/pricing",
-  },
+  // {
+  //   name: "Pricing",
+  //   icons: <PricingIcon />,
+  //   urlPath: "/pricing",
+  // },
   {
     name: "Usecase",
     icons: <UsecaseIcon />,
@@ -35,16 +35,16 @@ const SIDEBAR_DATA = [
     icons: <GitBook />,
     urlPath: "#",
   },
-  {
-    name: "Settings",
-    icons: <SettingIcon />,
-    urlPath: "/join-us",
-  },
-  {
-    name: "Profile",
-    icons: <ProfileIcon />,
-    urlPath: "#",
-  },
+  // {
+  //   name: "Settings",
+  //   icons: <SettingIcon />,
+  //   urlPath: "/join-us",
+  // },
+  // {
+  //   name: "Profile",
+  //   icons: <ProfileIcon />,
+  //   urlPath: "#",
+  // },
 ];
 
 interface SidebarProps {

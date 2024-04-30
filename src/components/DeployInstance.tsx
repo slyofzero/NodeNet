@@ -104,7 +104,7 @@ export function DeployInstance() {
   }, [paymentStatus]);
 
   return (
-    <div className="w-full h-full flex flex-col overflow-y-auto p-4">
+    <div className="w-full h-full flex flex-col overflow-y-auto overflow-x-hidden p-4">
       <ShowWhen
         show={
           <PaymentModal
@@ -153,31 +153,40 @@ export function DeployInstance() {
       </div>
       <div className="w-full mt-14">
         <h2 className="text-2xl">Choose Plan</h2>
-        <table className="w-full rounded border border-neutral-800 mt-6">
-          <thead>
-            <tr className="flex flex-row items-center p-2 border-b border-neutral-800 gap-16 md:gap-0">
-              <th className="w-full text-left text-sm text-zinc-400">Name</th>
-              <th className="w-full text-left text-sm text-zinc-400">Cores</th>
-              <th className="w-full text-left text-sm text-zinc-400">Memory</th>
-              {/* <th className="w-full text-left text-sm text-zinc-400">Storage</th> */}
-              <th className="w-full text-left text-sm text-zinc-400">
-                Bandwidth
-              </th>
-              <th className="w-full text-left text-sm text-zinc-400">Price</th>
-            </tr>
-          </thead>
 
-          <tbody>
-            {Object.entries(instancePlans[deployInstance.type]).map(
-              ([key, value]) => (
-                <InstancePlan key={key} {...value} plan={key} />
-              )
-            )}
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="w-full rounded border border-neutral-800 mt-6 overflow-auto">
+            <thead>
+              <tr className="flex flex-row items-center p-2 border-b border-neutral-800 gap-16 md:gap-0">
+                <th className="w-full text-left text-sm text-zinc-400">Name</th>
+                <th className="w-full text-left text-sm text-zinc-400">
+                  Cores
+                </th>
+                <th className="w-full text-left text-sm text-zinc-400">
+                  Memory
+                </th>
+                {/* <th className="w-full text-left text-sm text-zinc-400">Storage</th> */}
+                <th className="w-full text-left text-sm text-zinc-400">
+                  Bandwidth
+                </th>
+                <th className="w-full text-left text-sm text-zinc-400">
+                  Price
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {Object.entries(instancePlans[deployInstance.type]).map(
+                ([key, value]) => (
+                  <InstancePlan key={key} {...value} plan={key} />
+                )
+              )}
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      <div className="w-full flex justify-end items-center mt-12 px-4">
+      <div className="w-full flex justify-end items-center mt-12 px-4 mb-8 sm:mb-0">
         <button
           className={classNames(
             "z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-unit-20 h-unit-10 text-small gap-unit-2 [&amp;>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none  text-primary-foreground data-[hover=true]:opacity-hover max-w-fit px-8 rounded py-2 text-sm",

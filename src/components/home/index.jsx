@@ -24,11 +24,11 @@ export default function HomeMain() {
   );
 
   const disconnectedDashboard = (
-    <div className="w-full h-full flex flex-col justify-center items-center gap-2">
-      <h1 className="text-4xl font-bold text-neutral-100">
+    <div className="w-full h-full flex flex-col justify-center items-center gap-4">
+      <h1 className="text-4xl font-bold text-neutral-100 text-center">
         Sign In to view Dashboard
       </h1>
-      <p className="text-neutral-200 w-1/3 text-center">
+      <p className="text-neutral-200 w-3/4 md:w-1/3 text-center">
         To deploy a server or view your existing ones, please sign in using your
         Ethereum wallet
       </p>
@@ -50,7 +50,7 @@ export default function HomeMain() {
   return (
     <div className="mb-20 mt-10">
       <div className="flex items-center gap-4">
-        <button
+        {/* <button
           className={` p-3 text-lg ${
             activeTab === "Complete"
               ? "border-b-2 border-white text-white"
@@ -79,7 +79,7 @@ export default function HomeMain() {
           onClick={() => handleTabClick("Hobby")}
         >
           Hobby
-        </button>
+        </button> */}
 
         <div className="w-full flex justify-end">
           <ShowWhen
@@ -88,7 +88,7 @@ export default function HomeMain() {
           />
         </div>
       </div>
-      <div className="bg-[#1c1c1c87] rounded-2xl w-full h-[402px] flex flex-col justify-center items-center mt-10">
+      <div className="bg-[#1c1c1c87] rounded-2xl w-full h-[calc(100vh-300px)] flex flex-col justify-center items-center mt-10">
         <ShowWhen
           show={connectedDashboard}
           when={isConnectedAndSigned}
