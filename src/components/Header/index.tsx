@@ -1,13 +1,44 @@
-import Link from "next/link";
-import Image from "next/image";
-
-import NotifecationIcon from "../assets/NotifecationIcon";
 import { ConnectButton } from "../blockchain";
+import { useAuth } from "@/state";
+import { useCallback, useEffect, useState } from "react";
+import { JWTResponse } from "@/types";
+import { apiPoster } from "@/utils/api";
+import { JWTKeyName, signingMessage } from "@/utils/constants";
+import { errorHandler } from "@/utils/handlers";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
+  const { address, isConnected, signMessageAsync, setIsSigned } = useAuth();
+
+  const signIn = useCallback(
+    async function signIn() {
+      try {
+        const signature = await signMessageAsync({ message: signingMessage });
+        const body = { address, signature };
+        const { token } = (await apiPoster<JWTResponse>("/api/auth", body))
+          .data;
+
+        localStorage.setItem(JWTKeyName, String(token));
+        setIsSigned(true);
+      } catch (error) {
+        errorHandler(error);
+      }
+    },
+    [signMessageAsync, address, setIsSigned]
+  );
+
+  useEffect(() => {
+    setIsSigned(false);
+
+    const authToken = localStorage.getItem(JWTKeyName);
+    if (isConnected) {
+      if (!authToken) signIn();
+      else setIsSigned(true);
+    }
+  }, [isConnected, signIn, setIsSigned]);
+
   return (
     <header className=" top-0 z-40 flex w-full md:pt-10 pl-0  drop-shadow-1 md:p-0 py-5">
       <div className="flex flex-grow items-center justify-between px-10">
