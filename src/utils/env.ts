@@ -1,0 +1,8 @@
+export const {
+  FIREBASE_KEY,
+  ENCRYPTION_KEY,
+  JWT_SECRET,
+  RPC_URL,
+  CLOUD_AWS_ACCESS_KEY,
+  CLOUD_AWS_ACCESS_KEY_ID,
+} = process.env;
