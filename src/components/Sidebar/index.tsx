@@ -20,11 +20,11 @@ const SIDEBAR_DATA = [
     icons: <DashboardIcon />,
     urlPath: "/",
   },
-  // {
-  //   name: "Pricing",
-  //   icons: <PricingIcon />,
-  //   urlPath: "/pricing",
-  // },
+  {
+    name: "Pricing",
+    icons: <PricingIcon />,
+    urlPath: "/pricing",
+  },
   {
     name: "Usecase",
     icons: <UsecaseIcon />,
