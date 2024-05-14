@@ -33,7 +33,7 @@ const SIDEBAR_DATA = [
   {
     name: "Gitbook",
     icons: <GitBook />,
-    urlPath: "#",
+    urlPath: "https://cloudai-3.gitbook.io/cloud",
   },
   // {
   //   name: "Settings",
