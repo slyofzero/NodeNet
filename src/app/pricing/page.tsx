@@ -104,8 +104,8 @@ export default function Page() {
         <Typewriter text="Easy & Flexible Prices" />
       </h1>
       <p className="text-lg mt-3 text-center">
-        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-        consectetur, adipisci velit...
+        The road to freedom starts from here. Rent servers using crypto with
+        Cloud AI.
       </p>
       {Data.map((item, index) => (
         <div className="" key={index}>
