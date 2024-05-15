@@ -11,7 +11,7 @@ export function RentModal() {
         id=":ri:"
       >
         <h2 className="font-bold text-xl text-neutral-200">
-          Rent with Host AI
+          Rent with Cloud AI
         </h2>
         <p className="text-sm max-w-sm mt-2 font-normal text-neutral-300">
           After submitting a rental request, you will be contacted by a
