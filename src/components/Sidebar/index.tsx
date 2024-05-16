@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { FaXTwitter, FaTelegram } from "react-icons/fa6";
 
 // icons
 import DashboardIcon from "../assets/dashboard-icon";
@@ -34,6 +35,7 @@ const SIDEBAR_DATA = [
     name: "Gitbook",
     icons: <GitBook />,
     urlPath: "https://cloudai-3.gitbook.io/cloud",
+    target: "_blank",
   },
   // {
   //   name: "Settings",
@@ -159,6 +161,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   className={`flex items-center px-5 rounded-2xl py-3.5 gap-5 text-[22px] text-white  ${
                     pathname === item.urlPath ? " btn_bg " : ""
                   }`}
+                  target={item.target ? item.target : "_self"}
                 >
                   <span
                     className={` ${
@@ -174,6 +177,17 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               </li>
             ))}
           </ul>
+
+          <div className="text-white mt-8 flex justify-center gap-8">
+            <Link href={"https://x.com/CloudAiEth"}>
+              <FaXTwitter />
+            </Link>
+
+            <Link href={"https://t.me/CloudAIErc20"}>
+              <FaTelegram />
+            </Link>
+          </div>
+
           <Link
             href=""
             className={`flex items-center px-5 rounded-2xl py-3.5 gap-5 text-[22px]  text-white mt-80 `}
