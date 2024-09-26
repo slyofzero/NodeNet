@@ -19,7 +19,7 @@ import { WagmiProvider } from "wagmi";
 const { wallets } = getDefaultWallets();
 
 const config = getDefaultConfig({
-  appName: "Cloud AI",
+  appName: "Nimbus",
   projectId: "YOUR_PROJECT_ID",
   wallets: [
     ...wallets,

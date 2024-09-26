@@ -34,7 +34,7 @@ const SIDEBAR_DATA = [
   {
     name: "Gitbook",
     icons: <GitBook />,
-    urlPath: "https://cloudai-3.gitbook.io/cloud",
+    urlPath: "https://nimbus-docs.gitbook.io/nimbus",
     target: "_blank",
   },
   // {
@@ -179,11 +179,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           </ul>
 
           <div className="text-white mt-8 flex justify-center gap-8">
-            <Link href={"https://x.com/CloudAiEth"}>
+            <Link href={"#"}>
               <FaXTwitter />
             </Link>
 
-            <Link href={"https://t.me/CloudAIErc20"}>
+            <Link href={"#"}>
               <FaTelegram />
             </Link>
           </div>

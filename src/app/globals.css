@@ -7,6 +7,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --main-color: #9a02c1;
+  /* --main-color: #9a02c1; */
 }
 
 * {
@@ -37,19 +38,23 @@ body {
 
 .bg_grident {
   background-image: linear-gradient(to right, #ff36eb80, #00000000);
+  /* background-image: linear-gradient(to right, #ff36eb80, #00000000); */
 }
 
 .grid_bg {
   background-image: linear-gradient(45deg, #f68cff, #ffffff);
+  /* background-image: linear-gradient(45deg, #f68cff, #ffffff); */
 }
 
 .grid_bg_2 {
   background-image: linear-gradient(45deg, #e993ff, #9a02c1);
+  /* background-image: linear-gradient(45deg, #e993ff, #9a02c1); */
   color: #fff;
 }
 
 .popup_bg {
   background-image: linear-gradient(to right, #ff36eb80, #00000000);
+  /* background-image: linear-gradient(to right, #ff36eb80, #00000000); */
 }
 
 /*  */
@@ -90,6 +95,7 @@ body {
 .gradient-text {
   background-color: red;
   background-image: linear-gradient(45deg, #d365ea, #ffffff);
+  /* background-image: linear-gradient(45deg, #d365ea, #ffffff); */
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;

@@ -13,8 +13,8 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "Cloud Ai Dashboard",
-  description: "Cloud Ai Dashboard",
+  title: "Nimbus Dashboard",
+  description: "Nimbus Dashboard",
 };
 
 export default function RootLayout({

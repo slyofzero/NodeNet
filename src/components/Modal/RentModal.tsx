@@ -10,9 +10,7 @@ export function RentModal() {
         className="py-4 px-6 flex-initial text-large font-semibold flex flex-col gap-1 mb-4"
         id=":ri:"
       >
-        <h2 className="font-bold text-xl text-neutral-200">
-          Rent with Cloud AI
-        </h2>
+        <h2 className="font-bold text-xl text-neutral-200">Rent with Nimbus</h2>
         <p className="text-sm max-w-sm mt-2 font-normal text-neutral-300">
           After submitting a rental request, you will be contacted by a
           representative to confirm and process your order.
