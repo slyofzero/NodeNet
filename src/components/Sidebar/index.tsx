@@ -119,6 +119,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               blurDataURL="/images/logo.png"
               height={200}
               width={200}
+              className="w-36"
             />
           </div>
         </div>
