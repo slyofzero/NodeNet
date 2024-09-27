@@ -31,7 +31,7 @@ export default function Index({ setOpen }: any) {
         </svg>
       </div>
       <div className="popup_bg px-5 py-3 md:text-2xl text-xl mt-8 text-white font-semibold ">
-        Rent with Nimbus
+        Rent with Nimbus AI
       </div>
       <p className="text-white md:text-lg text-sm mt-4">
         After submitting a rental request, you will be contacted by a
