@@ -14,6 +14,8 @@ import GitBook from "../assets/git-book-icon";
 import SettingIcon from "../assets/SettingIcon";
 import ProfileIcon from "../assets/ProfileIcon";
 import LogOutIcon from "../assets/logoutIcon";
+import { useAccount, useDisconnect } from "wagmi";
+import { JWTKeyName } from "@/utils/constants";
 
 const SIDEBAR_DATA = [
   {
@@ -56,6 +58,7 @@ interface SidebarProps {
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   const pathname = usePathname();
+  const { disconnect } = useDisconnect();
 
   const trigger = useRef<any>(null);
   const sidebar = useRef<any>(null);
@@ -100,6 +103,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       document.querySelector("body")?.classList.remove("sidebar-expanded");
     }
   }, [sidebarExpanded]);
+
+  const logout = () => {
+    console.log("Logout");
+    localStorage.removeItem(JWTKeyName);
+    disconnect();
+  };
 
   return (
     <aside
@@ -151,49 +160,52 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       {/* <!-- SIDEBAR HEADER --> */}
 
       <div
-        className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear"
+        className="no-scrollbar flex-grow flex flex-col overflow-y-auto duration-300 ease-linear"
         id="scroll_none"
       >
         {/* <!-- Sidebar Menu --> */}
-        <nav className="mt-5 py-4 lg:mb-9 mx-5">
-          <ul className="flex flex-col gap-7 ">
-            {SIDEBAR_DATA.map((item, index) => (
-              <li key={index}>
-                <Link
-                  href={item.urlPath}
-                  className={`flex items-center px-5 rounded-2xl py-3.5 gap-5 text-[22px] text-white  ${
-                    pathname === item.urlPath ? " btn_bg " : ""
-                  }`}
-                  target={item.target ? item.target : "_self"}
-                >
-                  <span
-                    className={` ${
-                      pathname === item.urlPath
-                        ? " text-white"
-                        : "text-[#888490]"
+        <nav className="h-full flex flex-col justify-between gap-4 mt-5 py-4 lg:mb-9 mx-5">
+          <div className="flex flex-col gap-8">
+            <ul className="flex flex-col gap-7 ">
+              {SIDEBAR_DATA.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    href={item.urlPath}
+                    className={`flex items-center px-5 rounded-2xl py-3.5 gap-5 text-[22px] text-white  ${
+                      pathname === item.urlPath ? " btn_bg " : ""
                     }`}
+                    target={item.target ? item.target : "_self"}
                   >
-                    {item.icons}
-                  </span>
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+                    <span
+                      className={` ${
+                        pathname === item.urlPath
+                          ? " text-white"
+                          : "text-[#888490]"
+                      }`}
+                    >
+                      {item.icons}
+                    </span>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
-          <div className="text-white mt-8 flex justify-center gap-8">
-            <Link href={"#"}>
-              <FaXTwitter />
-            </Link>
+            <div className="text-white flex justify-center gap-8">
+              <Link href={"#"}>
+                <FaXTwitter />
+              </Link>
 
-            <Link href={"#"}>
-              <FaTelegram />
-            </Link>
+              <Link href={"https://t.me/NodeNetPortal"}>
+                <FaTelegram />
+              </Link>
+            </div>
           </div>
 
           <Link
             href=""
-            className={`flex items-center px-5 rounded-2xl py-3.5 gap-5 text-[22px]  text-white mt-80 `}
+            className={`flex items-center px-5 rounded-2xl py-3.5 gap-5 text-[22px]  text-white`}
+            onClick={logout}
           >
             <LogOutIcon />
             <span>Logout</span>

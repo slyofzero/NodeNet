@@ -236,7 +236,9 @@ export function Instances() {
       <h1 className="text-[48px] font-extrabold gradient-text text-center">
         <Typewriter text="Welcome to the NodeNet" />
       </h1>
-      <p className="text-lg">Get started by deploying your first instance</p>
+      <p className="text-lg text-center px-2">
+        Get started by deploying your first instance
+      </p>
       <DeployInstanceButton />
     </>
   );
