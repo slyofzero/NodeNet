@@ -105,7 +105,7 @@ export default function Page() {
       </h1>
       <p className="text-lg mt-3 text-center">
         The road to freedom starts from here. Rent servers using crypto with
-        Nimbus AI.
+        NodeNet.
       </p>
       {Data.map((item, index) => (
         <div className="" key={index}>

@@ -88,7 +88,7 @@ export default function HomeMain() {
           />
         </div>
       </div>
-      <div className="bg-[#1c1c1c87] rounded-2xl w-full h-[calc(100vh-300px)] flex flex-col justify-center items-center mt-10">
+      <div className="bg-[#030d27] rounded-2xl w-full h-[calc(100vh-300px)] flex flex-col justify-center items-center mt-10">
         <ShowWhen
           show={connectedDashboard}
           when={isConnectedAndSigned}

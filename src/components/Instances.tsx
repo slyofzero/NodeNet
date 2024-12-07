@@ -234,7 +234,7 @@ export function Instances() {
   const noInstances = (
     <>
       <h1 className="text-[48px] font-extrabold gradient-text text-center">
-        <Typewriter text="Welcome to the Nimbus AI" />
+        <Typewriter text="Welcome to the NodeNet" />
       </h1>
       <p className="text-lg">Get started by deploying your first instance</p>
       <DeployInstanceButton />

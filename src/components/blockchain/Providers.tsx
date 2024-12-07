@@ -19,7 +19,7 @@ import { WagmiProvider } from "wagmi";
 const { wallets } = getDefaultWallets();
 
 const config = getDefaultConfig({
-  appName: "Nimbus AI",
+  appName: "NodeNet",
   projectId: "YOUR_PROJECT_ID",
   wallets: [
     ...wallets,
@@ -40,7 +40,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider
           theme={darkTheme({
-            accentColor: "#9333ea",
+            accentColor: "#1047DC",
           })}
         >
           {children}

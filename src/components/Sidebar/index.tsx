@@ -104,14 +104,14 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <aside
       ref={sidebar}
-      className={`absolute left-0 top-0 z-50 flex h-screen w-[320px] flex-col overflow-y-hidden lg:bg-transparent bg-black duration-300 ease-linear k lg:static lg:translate-x-0 ${
+      className={`bg-[#071642] absolute left-0 top-0 z-50 flex h-screen w-[320px] flex-col overflow-y-hidden duration-300 ease-linear k lg:static lg:translate-x-0 ${
         sidebarOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="flex items-center justify-between gap-2  py-5.5 lg:py-6.5">
         <div className="md:p-8 px-4 py-8">
-          <div className="relative w-[205px] h-[76px] bounse">
+          <div className="relative w-[205px] h-[76px] bounse text-white flex items-center gap-4">
             <Image
               src="/images/logo.png"
               alt="logo"
@@ -119,8 +119,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               blurDataURL="/images/logo.png"
               height={200}
               width={200}
-              className="w-36"
+              className="w-24"
             />
+            <h1 className="text-3xl font-bold">NodeNet</h1>
+            <sup className="text-xs">TM</sup>
           </div>
         </div>
 

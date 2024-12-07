@@ -6,8 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --main-color: #9a02c1;
-  /* --main-color: #9a02c1; */
+  --main-color: #1047dc;
+  /* --main-color: #1047dc; */
 }
 
 * {
@@ -19,7 +19,8 @@
 body {
   font-size: 16px;
   font-weight: 400;
-  background-image: url("/images/bg-image.png");
+  /* background-image: url("/images/bg-image.png"); */
+  background-color: #041237;
   width: 100%;
   background-position: fixed;
   background-size: cover;
@@ -30,30 +31,30 @@ body {
 }
 
 .bg_gif {
-  background-image: url("/images/gif.gif");
+  /* background-image: url("/images/gif.gif"); */
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .bg_grident {
-  background-image: linear-gradient(to right, #ff36eb80, #00000000);
+  background-image: linear-gradient(to right, #5136ff80, #00000000);
   /* background-image: linear-gradient(to right, #ff36eb80, #00000000); */
 }
 
 .grid_bg {
-  background-image: linear-gradient(45deg, #f68cff, #ffffff);
+  background-image: linear-gradient(45deg, #8aa7ff, #ffffff);
   /* background-image: linear-gradient(45deg, #f68cff, #ffffff); */
 }
 
 .grid_bg_2 {
-  background-image: linear-gradient(45deg, #e993ff, #9a02c1);
-  /* background-image: linear-gradient(45deg, #e993ff, #9a02c1); */
+  background-image: linear-gradient(45deg, #94afff, #1047dc);
+  /* background-image: linear-gradient(45deg, #e993ff, #1047dc); */
   color: #fff;
 }
 
 .popup_bg {
-  background-image: linear-gradient(to right, #ff36eb80, #00000000);
+  background-image: linear-gradient(to right, #5136ff80, #00000000);
   /* background-image: linear-gradient(to right, #ff36eb80, #00000000); */
 }
 
@@ -94,7 +95,7 @@ body {
 
 .gradient-text {
   background-color: red;
-  background-image: linear-gradient(45deg, #d365ea, #ffffff);
+  background-image: linear-gradient(45deg, #3c63d7, #ffffff);
   /* background-image: linear-gradient(45deg, #d365ea, #ffffff); */
   background-size: 100%;
   background-repeat: repeat;
@@ -107,18 +108,12 @@ body {
 .btn_bg {
   background-image: linear-gradient(
     to right,
-    #1f8ebe,
-    #007dbf,
-    #006abe,
-    #0055b9,
-    #003dae,
-    #3133ad,
-    #4b24aa,
-    #6004a4,
-    #7404af,
-    #8804b9,
-    #9d03c3,
-    #b102cd
+    #0a2a66,
+    #1a3d8c,
+    #2b50b1,
+    #3c63d7,
+    #4c75f1,
+    #5379e6
   );
 }
 

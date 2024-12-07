@@ -11,7 +11,7 @@ export function RentModal() {
         id=":ri:"
       >
         <h2 className="font-bold text-xl text-neutral-200">
-          Rent with Nimbus AI
+          Rent with NodeNet
         </h2>
         <p className="text-sm max-w-sm mt-2 font-normal text-neutral-300">
           After submitting a rental request, you will be contacted by a
@@ -53,7 +53,7 @@ export function RentModal() {
           </div>
         </div>
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-4 h-[1px] w-full"></div>
-        <button className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-white rounded-md h-10 font-medium shadow-input bg-zinc-900 shadow-[0px_0px_1px_1px_var(--neutral-800)] mr-2">
+        <button className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-white rounded-md h-10 font-medium shadow-input bg-[#1047DC] shadow-[0px_0px_1px_1px_var(--neutral-800)] mr-2">
           <div className="v-centered">
             <svg
               xmlns="http://www.w3.org/2000/svg"
