@@ -1,5 +1,6 @@
-import HomeMain from '@/components/home'
+import React from "react";
+import Usecase from "@/components/usecase";
 
-export default function Home() {
-  return <HomeMain />
+export default function Page() {
+  return <Usecase />;
 }

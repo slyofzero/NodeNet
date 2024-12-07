@@ -11,16 +11,14 @@ import DashboardIcon from "../assets/dashboard-icon";
 import PricingIcon from "../assets/pricing-icon";
 import UsecaseIcon from "../assets/Usecase";
 import GitBook from "../assets/git-book-icon";
-import SettingIcon from "../assets/SettingIcon";
-import ProfileIcon from "../assets/ProfileIcon";
 import LogOutIcon from "../assets/logoutIcon";
 import { useAccount, useDisconnect } from "wagmi";
 import { JWTKeyName } from "@/utils/constants";
 
 const SIDEBAR_DATA = [
   {
-    name: "Dashboard",
-    icons: <DashboardIcon />,
+    name: "Usecase",
+    icons: <UsecaseIcon />,
     urlPath: "/",
   },
   {
@@ -29,9 +27,9 @@ const SIDEBAR_DATA = [
     urlPath: "/pricing",
   },
   {
-    name: "Usecase",
-    icons: <UsecaseIcon />,
-    urlPath: "/usecase",
+    name: "Dashboard",
+    icons: <DashboardIcon />,
+    urlPath: "/dashboard",
   },
   {
     name: "Gitbook",
