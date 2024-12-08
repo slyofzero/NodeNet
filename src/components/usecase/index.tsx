@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Index() {
   return (
-    <div className="min-h-screen md:max-h-screen">
-      <div className="bg-[#030d27] rounded-2xl md:h-[701px] h-[600px] px-4 flex flex-col gap-8 justify-center items-center mt-36 md:mt-10">
+    <div className="min-h-screen md:max-h-screen py-10">
+      <div className="bg-[#030d27] rounded-2xl h-fit p-4 flex flex-col gap-8 justify-center items-center mt-10">
         <h1 className="md:text-[48px] text-[36px] font-extrabold gradient-text text-center">
           NODE NET - $NNET
         </h1>
