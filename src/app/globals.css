@@ -105,6 +105,40 @@ body {
   -moz-text-fill-color: transparent;
 }
 
+.special-bg {
+  background: linear-gradient(
+    105.01deg,
+    #63b6e0 -14.99%,
+    #0146a5 57.95%,
+    #001372 92.77%
+  );
+}
+
+.special-bg-2 {
+  border: 1px solid #4ed0f9; /* Fallback */
+  border-image-source: linear-gradient(180deg, #4ed0f9 0%, #1047dc 100%);
+  border-image-slice: 1;
+
+  background: linear-gradient(
+    180deg,
+    rgba(20, 78, 227, 0.1) 0%,
+    rgba(127, 0, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(100px);
+
+  box-shadow: 0px 1px 40px 0px #0d89cf33 inset;
+
+  box-shadow: 0px 4px 18px 0px #083b584d inset;
+
+  box-shadow: 0px 98px 100px -48px #73c6fa4d inset;
+
+  box-shadow: 0px -82px 68px -64px #1e297b4d inset;
+
+  box-shadow: 0px 7px 11px -4px #ffffff inset;
+
+  box-shadow: 0px 39px 56px -36px #ffffff80 inset;
+}
+
 .btn_bg {
   background-image: linear-gradient(
     to right,

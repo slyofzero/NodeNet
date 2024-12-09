@@ -12,6 +12,7 @@ import PricingIcon from "../assets/pricing-icon";
 import UsecaseIcon from "../assets/Usecase";
 import GitBook from "../assets/git-book-icon";
 import LogOutIcon from "../assets/logoutIcon";
+import NodesIcon from "../assets/NodesIcon";
 import { useAccount, useDisconnect } from "wagmi";
 import { JWTKeyName } from "@/utils/constants";
 
@@ -30,6 +31,11 @@ const SIDEBAR_DATA = [
     name: "Dashboard",
     icons: <DashboardIcon />,
     urlPath: "/dashboard",
+  },
+  {
+    name: "Nodes",
+    icons: <NodesIcon />,
+    urlPath: "/nodes",
   },
   {
     name: "Gitbook",
