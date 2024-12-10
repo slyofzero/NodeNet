@@ -44,22 +44,24 @@ export default function Nodes() {
         </button>
 
         <h1 className="gradient-text text-5xl font-extrabold">
-          80% Cheaper GPUs
+          70% Cheaper GPUs
         </h1>
 
         <p>
-          Our sister website and mobile app marketplace helps provide high
-          quality hardware and software at a fraction of the cost when renting
-          from others.
+          Our sister website and mobile app marketplace offers access to
+          high-quality hardware and software at a fraction of the cost compared
+          to renting from other providers.
         </p>
 
         <p>
-          Nvidia and AMD dedicated GPU servers provide powerful high-speed
-          computing for applications requiring massive computing power, making
-          it an ideal choice for running deep learning models, artificial
-          intelligence and big data analysis. GPU servers are usually deployed
-          in data centers or cloud environments, and users or applications can
-          access them with NodelyAI remotely.
+          <strong>Nvidia</strong> and <strong>AMD dedicated GPU</strong> servers
+          deliver powerful, high-speed computing, making them the perfect
+          solution for applications requiring intensive computational power.
+          They are ideal for running deep learning models, artificial
+          intelligence tasks, and big data analysis. These GPU servers are
+          typically deployed in data centers or cloud environments and can be
+          accessed remotely through <strong>NodeNetAI</strong> for seamless
+          performance.
         </p>
       </div>
 
@@ -75,20 +77,26 @@ export default function Nodes() {
 
           <h6 className="text-[#4C7CFF]">Renting GPUs</h6>
           <h6 className="text-white text-xl font-semibold">
-            For Businesses & Individuals in need of remote GPU rental
+            For Businesses and Individuals in Need of Remote GPU Rental
           </h6>
 
           <p className="text-[#5F5F99]">
-            Search our marketplace and find the GPUs you need for running
-            applications requiring the massive computing power you need.
+            Explore our marketplace to find the GPUs you need for applications
+            requiring massive computing power.
           </p>
 
           <p>Providing high-quality hardware and software.</p>
 
           <ul className="flex flex-col gap-2">
-            <li>•⁠ Affordable rates</li>
-            <li>•⁠ High-quality hardware and software </li>
-            <li>•⁠ Easy rental process</li>
+            <li>
+              •⁠ Affordable Rates: Save on costs without compromising
+              performance.
+            </li>
+            <li>
+              •⁠ High-Quality Hardware and Software: Reliable, cutting-edge
+              solutions.
+            </li>
+            <li>•⁠ Easy Rental Process: Simple and seamless setup.</li>
           </ul>
 
           <div className="flex gap-4">
