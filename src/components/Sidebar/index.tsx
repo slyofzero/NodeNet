@@ -37,12 +37,12 @@ const SIDEBAR_DATA = [
     icons: <NodesIcon />,
     urlPath: "/nodes",
   },
-  {
-    name: "Gitbook",
-    icons: <GitBook />,
-    urlPath: "https://node-net.gitbook.io/node-net",
-    target: "_blank",
-  },
+  // {
+  //   name: "Gitbook",
+  //   icons: <GitBook />,
+  //   urlPath: "https://node-net.gitbook.io/node-net",
+  //   target: "_blank",
+  // },
   // {
   //   name: "Settings",
   //   icons: <SettingIcon />,
@@ -178,7 +178,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     className={`flex items-center px-5 rounded-2xl py-3.5 gap-5 text-[22px] text-white  ${
                       pathname === item.urlPath ? " btn_bg " : ""
                     }`}
-                    target={item.target ? item.target : "_self"}
+                    // target={item.target ? item.target : "_self"}
                   >
                     <span
                       className={` ${
