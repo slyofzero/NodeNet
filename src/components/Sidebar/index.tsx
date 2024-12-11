@@ -40,7 +40,7 @@ const SIDEBAR_DATA = [
   {
     name: "Gitbook",
     icons: <GitBook />,
-    urlPath: "https://nimbus-docs.gitbook.io/nimbus",
+    urlPath: "https://node-net.gitbook.io/node-net",
     target: "_blank",
   },
   // {
