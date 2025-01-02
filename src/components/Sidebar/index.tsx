@@ -196,7 +196,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             </ul>
 
             <div className="text-white flex justify-center gap-8">
-              <Link href={"#"}>
+              <Link href={"https://x.com/Nodenettech"}>
                 <FaXTwitter />
               </Link>
 
